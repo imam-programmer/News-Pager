@@ -22,7 +22,7 @@ const Navbar = () => {
     <div className='fixed w-full z-10 bg-white dark:bg-blue-900 shadow-md'>
       <div className='max-w-7xl mx-auto px-4 py-3 flex items-center justify-between'>
         {/* logo */}
-        <div className='md:text-2xl text-lg font-bold text-blue-600 cursor-pointer'>
+        <div className='md:text-2xl text-lg font-bold text-blue-600 dark:text-gray-200 cursor-pointer'>
           NewsApp
         </div>
 
@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className='hidden md:flex space-x-6'>
           {
             links.map((link) => (
-              <p key={link} className='text-gray-700 hover:text-blue-600 transition'>
+              <p key={link} className='text-gray-700 dark:text-gray-200 dark:hover:text-white hover:text-blue-600 transition'>
                 {link}
               </p>
             ))
@@ -43,7 +43,7 @@ const Navbar = () => {
             <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4' />
             <input type="text" placeholder='Search news...' className='md:pl-10 pl-7 w-30 md:w-64 outline-none ' />
           </div>
-          <button onClick={toggleTheme} className='bg-gray-200 px-3 py-2 rounded-lg cursor-pointer'>
+          <button onClick={toggleTheme} className='bg-gray-200 px-3 py-2 dark:bg-blue-500 dark:text-gray-200 rounded-lg cursor-pointer'>
             {theme==='light'?
             <Moon />
             :
