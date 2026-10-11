@@ -3,8 +3,7 @@ import React, { useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
 
 const Navbar = () => {
-  const [theme,setTheme]=useContext(ThemeContext)
-  console.log(theme)
+  const {theme,setTheme}=useContext(ThemeContext)
   const links = [
     "Business", "Entertainment", "General", "Health", "Science", "Sports", "Technology"
   ]
