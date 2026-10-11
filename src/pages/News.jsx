@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useContext, useEffect } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
+import NewsCart from '../components/NewsCart'
 
 const News = () => {
 
@@ -23,6 +24,7 @@ const News = () => {
     <div className='h-screen bg-gray-200 dark:bg-gray-800 py-25 px-4 md:px-0'>
       <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-7'>
         {Articles.map((item, idx) => (
+       
           <NewsCart key={idx} article={item} />
         ))}
       </div>
