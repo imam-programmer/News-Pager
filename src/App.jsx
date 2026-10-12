@@ -10,25 +10,20 @@ const App = () => {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
-const router=createBrowserRouter([
-  {
-    path: "/",
-    Component: Root,
-    children: [
-      { index: true, Component: News },
-      
-   
- 
-    ],
-  },
-]);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      Component: Root,
+      children: [
+        { index: true, Component: News },
 
 
+
+      ],
+    },
+  ]);
   return (
-    <RouterProvider router={router}>
-
-  
-    </RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   )
 }
 

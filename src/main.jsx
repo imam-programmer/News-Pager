@@ -7,11 +7,11 @@ import ScrollToTop from 'react-scroll-to-top'
 
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+
   <ThemeProvider>
       <App />
        <ScrollToTop smooth color='white' style={{backgroundColor:"#3882f6",display:"flex" , alignItems:"center",justifyContent:"center"}}/>
   </ThemeProvider>
    
-  </StrictMode>,
+
 )
