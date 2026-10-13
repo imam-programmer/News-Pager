@@ -9,7 +9,7 @@ const News = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    let ignore = false; // purono request-er response jate ovverwrite na kore
+    let ignore = false;
 
     const fetchAllNews = async () => {
       try {
@@ -37,7 +37,7 @@ const News = () => {
   }, [category, country]);
 
   return (
-    <div className="min-h-screen bg-gray-200 dark:bg-gray-800 pt-24 pb-10 px-4 md:px-0">
+    <div className="min-h-screen bg-gray-200 dark:bg-gray-800 pt-24 pb-10 px-4 md:px-3">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-2xl font-bold capitalize mb-6 text-gray-800 dark:text-gray-200">
           {category} News
@@ -47,7 +47,7 @@ const News = () => {
           <p className="text-center text-gray-600 dark:text-gray-300">Loading...</p>
         ) 
         : (
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:gap-7 gap-4">
             {Articles.map((item, idx) => (
               <NewsCart key={item.url || idx} article={item} />
             ))}
